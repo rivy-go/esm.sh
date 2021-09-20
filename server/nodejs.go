@@ -26,7 +26,7 @@ const (
 	nodejsLatestLTS  = "14.17.5"
 	nodeTypesVersion = "16.9.1"
 	nodejsDistURL    = "https://nodejs.org/dist/"
-	refreshDuration  = 5 * 60 // 5 minues
+	refreshDuration  = 5 * 60 // 5 minutes
 )
 
 var builtInNodeModules = map[string]bool{
@@ -291,17 +291,17 @@ func cachePackageInfo(name string, version string) (info NpmPackage, err error) 
 		if ok {
 			info = h.Versions[distVersion]
 		} else {
-			var majorVerions versionSlice
+			var majorVersions versionSlice
 			for key := range h.Versions {
 				if regFullVersion.MatchString(key) && strings.HasPrefix(key, version+".") {
-					majorVerions = append(majorVerions, key)
+					majorVersions = append(majorVersions, key)
 				}
 			}
-			if l := len(majorVerions); l > 0 {
+			if l := len(majorVersions); l > 0 {
 				if l > 1 {
-					sort.Sort(majorVerions)
+					sort.Sort(majorVersions)
 				}
-				info = h.Versions[majorVerions[0]]
+				info = h.Versions[majorVersions[0]]
 			}
 		}
 	}

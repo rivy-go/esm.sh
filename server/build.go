@@ -296,7 +296,7 @@ func (task *buildTask) build(tracing *stringSet) (esm *ESM, err error) {
 						}
 					}
 
-					// bundles undefiend relative imports or the package/module it self
+					// bundles undefined relative imports or the package/module it self
 					if isLocalImport(specifier) || specifier == task.pkg.ImportPath() {
 						return api.OnResolveResult{}, nil
 					}
