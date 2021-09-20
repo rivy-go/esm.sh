@@ -1,4 +1,4 @@
-module esm.sh
+module github.com/alephjs/esm.sh
 
 go 1.16
 
