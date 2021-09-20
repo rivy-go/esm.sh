@@ -5,15 +5,20 @@ You will need [Go](https://golang.org/dl) 1.16+ to compile the server. The serve
 
 ## Clone code
 
-```baseh
-git clone https://github.com/alephjs/esm.sh
-cd esm.sh
+```bash
+TARGET_DIR=...
+REPO=https://github.com/alephjs/esm.sh ## or alternative fork (eg, `https://github.com/rivy-go/esm.sh`)
+git clone "${REPO}" "${TARGET_DIR}"
+cd "${TARGET_DIR}"
 ```
 
 ## Run the sever locally
 
 ```bash
 go run main.go --port=8080 --dev
+## or install and run
+# go install
+# esm.sh --port=8080 --dev
 ```
 
 then you can import `React` from http://localhost:8080/react
