@@ -3,6 +3,7 @@ module github.com/alephjs/esm.sh
 go 1.16
 
 require (
+	LOCAL v0.0.0-00010101000000-000000000000
 	github.com/aws/aws-sdk-go v1.40.45
 	github.com/dgraph-io/ristretto v0.1.0
 	github.com/evanw/esbuild v0.12.24
@@ -12,3 +13,5 @@ require (
 	github.com/mssola/user_agent v0.5.3
 	github.com/postui/postdb v0.6.2
 )
+
+replace LOCAL => ./.

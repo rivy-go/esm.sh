@@ -3,7 +3,7 @@ package main
 import (
 	"embed"
 
-	"esm.sh/server"
+	"LOCAL/server"
 )
 
 //go:embed embed
